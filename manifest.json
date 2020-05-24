@@ -1,0 +1,14 @@
+{
+	"name" : "IPL2020",
+	"short_name" : "IPL",
+	"start_url" : "http://3.20.100.202/ipl/login.html",
+	"display" : "fullscreen",
+	"orientation" : "any",
+	"background_color" : "pick",
+	"icons" : [
+		{
+			"src": "https://i.ibb.co/QQLr2V0/IPL-Logo-PNG-715x715.png",
+			"sizes": "715x715",
+			"type": "image/webp"
+		}]
+}

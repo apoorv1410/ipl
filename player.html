@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+
+    </script>
+    <script src="extensions/multiple-sort/bootstrap-table-multiple-sort.js"></script>
+        <title>IPL app</title>
+       <script> function sortTable() { 
+            var table, i, x, y; 
+            table = document.getElementById("table"); 
+            var switching = true; 
+
+            // Run loop until no switching is needed 
+            while (switching) { 
+                switching = false; 
+                var rows = table.rows; 
+
+                // Loop to go through all rows 
+                for (i = 1; i < (rows.length - 1); i++) { 
+                    var Switch = false; 
+
+                    // Fetch 2 elements that need to be compared 
+                    x = rows[i].getElementsByTagName("TD")[0]; 
+                    y = rows[i + 1].getElementsByTagName("TD")[0]; 
+
+                    // Check if 2 rows need to be switched 
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
+                        { 
+
+                        // If yes, mark Switch as needed and break loop 
+                        Switch = true; 
+                        break; 
+                    } 
+                } 
+                if (Switch) { 
+                    // Function to switch rows and mark switch as completed 
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
+                    switching = true; 
+                } 
+            } 
+        } 
+    </script> 
+    </head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="NB">
+        <a class="navbar-brand" href="#">
+            <img src="https://i.ibb.co/QQLr2V0/IPL-Logo-PNG-715x715.png" width="30" height="30" alt="" loading="lazy" id="IPLogo">
+          </a>
+          
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="player.html" id="PS">Player Statistics<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="iplTeam.html" id="TS">Team Statistics</a>
+            </li>
+            <li>
+                <a class=""nav-link href="login.html" id="LO">Log Out</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <h1>Team IPL-2020</h1>
+        <form>
+            <div class="w-50">
+                <label for="exampleFormControlSelect1">Select Team</label>
+                <select class="form-control" id="dropdown">
+                    <option data-value="MI">MI</option>
+                    <option data-value="CSK">CSK</option>
+                    <option data-value="DC">DC</option>
+                    <option data-value="KXIP">KXIP</option>
+                    <option data-value="RR">RR</option>
+                    <option data-value="RCB">RCB</option>
+                    <option data-value="SRH">SRH</option>
+                    <option data-value="KKR">KKR</option>
+                </select>
+            </div>
+        </form>
+        <div id="playertable" class="mt-5">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="player.js">
+   
+    </script>
+</body>
+
+</html>

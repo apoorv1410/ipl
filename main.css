@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+    #IPLogo
+    {
+        transform: scale(2.2);
+        margin-top:-10px;
+    }
+
+    #PS,#TS,#LO
+    {
+        font-family: Raleway;
+        font-size: 20px;
+    }
+
+    #LO{
+        color: whitesmoke;
+       margin-left: 52em;
+       margin-top: 0.9em;
+    }
+
+    #NB
+    {
+        background-image:linear-gradient(to left,transparent,white),url(https://i.ibb.co/7j2rjzG/Book-Grounds-in-Delhi-NCR-Gurgaon-Online-Sportsground-co-in.jpg) ;
+    }
+
+    #teamSelector
+    {
+        
+        width:25vw;
+        margin:auto;
+        margin-top:40px;
+    }
+
+    #selText
+    {
+        font-family: Raleway;
+        font-size: 25px;
+        position: absolute;
+        margin-left:410px;
+        margin-top:44px;
+    }
+
+    #tab
+    {
+        margin-left:100px;
+        margin-top:50px;
+        border: 1px solid black;
+        
+        border-spacing: 5px;
+        font-family: Raleway;
+        font-size: 15px;
+        
+    } 
+
+
+    #tab{
+        width: 50em;
+    }
+    
+    #tab tr:nth-child(even) 
+    {
+        background-color: rgb(174, 160, 212);
+    }
+    #tab tr:nth-child(odd) 
+    {
+        background-color: #fff;
+    }
+
+    #container-p
+    {
+        width: 24em;
+        position:absolute;
+        margin-left:1000px;
+        margin-top:200px;
+        transform: scale(1.7);
+    }
+
+    #container-t
+    {
+      position: absolute;
+      transform: scale(.5);
+      margin-top:100px;
+      
+    }
+
+    #container-t2
+    {
+      position: absolute;
+      transform: scale(.5);
+      margin-top:20em;
+      
+    }
+
+    .border_class {
+        border: 2px solid blue;
+        grid-template-rows: max-content;
+        width: 50em;
+        
+      }
+      .table tr:nth-child(even) {
+        background-color:rgb(124, 124, 211);
+        color: black;
+      }
+
+     
+      
+      
+
+
+

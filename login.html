@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log In</title>
+    <link rel='manifest' href='/manifest.json'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+      body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: white;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+    background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+form{
+  padding: 2em,10em;
+  width: 20em;
+  height: 150px;
+}
+form:hover{
+  padding: 2em,10em;
+  width: 20em;
+  height: 150px;
+  text-decoration-color: grey;
+}
+   
+button{
+  margin-top: 2em;
+}
+
+a,a:hover{
+  color: white;
+}
+
+ 
+</style>
+  </head>
+  <body>
+    <div class=image>
+      <img src="https://i.ibb.co/QQLr2V0/IPL-Logo-PNG-715x715.png" style="float:right"  width="700" height="700" > 
+      </div>
+    <div class="container">
+       
+      <h1>IPL2020 </h1>
+      <div class="form-2">
+        <h3>Log In</h3>
+        <br>
+        <form id="credentials" class=form-2>
+          <div class="form-group">
+            <label for="userName">Usename</label>
+            <input type="text" class="form-control" id="userName" placeholder="Enter Username">
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter Password">
+          </div>
+        </form>
+        <button class="btn btn-primary" value="Submit" onclick="login()">Log In</button>
+        <br>
+        <a href="signup.html"><button class="btn btn-primary">Sign Up</button></a>
+        <br>
+        <br>
+        <div class="forgot" >
+          <a href="forgot.html">Forgot pssword?</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+   function login(){
+  var userid = document.getElementById('userName').value;
+  var pass= document.getElementById('password').value;
+
+  var issues = JSON.parse(localStorage.getItem('issues'));
+  for (var i = 0; i < issues.length; i++) {
+
+    if (issues[i].user == userid && issues[i].password==pass)
+     {
+      window.location.href="player.html";
+      }
+   
+  }
+  setTimeout(function(){alert("Not Registered. \n Sign Up"); }, 3000);
+ 
+}
+
+    </script>
+    <script src="chance.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
